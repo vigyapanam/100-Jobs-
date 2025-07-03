@@ -2,147 +2,190 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>100 Day’s 100 Job’s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jobstechjobs</title>
+  <script src="https://kit.fontawesome.com/93e17417c7.js" crossorigin="anonymous"></script>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle, #f7a2c7, #6179ff7f);
       margin: 0;
       padding: 0;
-      background-color: #000;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
     }
 
-    h1 {
-      margin-top: 30px;
-      font-size: 36px;
+    .header {
+      padding: 20px;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header img {
+      height: 50px;
+    }
+
+    .social-icons a {
+      margin-left: 15px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .text {
+      text-align: center;
+      padding: 20px 0 5px;
+    }
+
+    .text h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .text h2 {
+      font-size: 20px;
+      margin-top: 5px;
       font-weight: bold;
     }
 
-    .icons {
-      margin: 20px 0;
-    }
-
-    .icons img {
-      width: 35px;
-      margin: 0 10px;
-      vertical-align: middle;
-    }
-
-    .job-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+    .container {
+      margin: 2% auto;
       padding: 20px;
       max-width: 1200px;
-      margin: auto;
     }
 
-    .job-card {
-      background-color: #00a8c6;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    .card-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
-    .job-card img {
+    .card {
+      background: #ffffff8e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 300px;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
       width: 100%;
-      height: 180px;
+      height: 200px;
+      border-radius: 8px;
       object-fit: cover;
     }
 
-    .info {
-      padding: 15px;
-    }
-
-    .info h3 {
-      margin: 10px 0;
-      font-size: 18px;
-    }
-
-    .info p {
-      margin: 5px 0;
-      font-size: 14px;
-    }
-
-    .apply-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #3d3ddf;
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
       color: white;
-      text-decoration: none;
-      border-radius: 20px;
-      font-weight: bold;
+      background: #4CAF50;
+      font-size: 16px;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 28px;
+    button:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
       }
-      .icons img {
-        width: 28px;
+
+      .container {
+        padding: 5%;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      .text h1 {
+        font-size: 24px;
+      }
+
+      .text h2 {
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>100 Day’s 100 Job’s</h1>
-
-  <div class="icons">
-    <a href="https://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
-    <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" /></a>
-    <a href="https://t.me/yourchannel" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" /></a>
-    <a href="https://wa.me/919999999999" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" /></a>
+  <!-- Header with Logo and Social Icons -->
+  <div class="header">
+    <img src="https://jobstechjobs.com/images/logo.png" alt="Site Logo" />
+    <div class="social-icons">
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/yourchannel" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://wa.me/919999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
   </div>
 
-  <div class="job-grid" id="jobGrid">Loading jobs...</div>
+  <!-- Title and Subtitle -->
+  <div class="text">
+    <h1><a href="https://www.hiringstores.com/" style="color:black; text-decoration: none;">Latest Job Alert From Top Industry</a></h1>
+    <h2>100 Day's 100 Job's Challenge</h2>
+  </div>
 
-  <script src="https://unpkg.com/tabletop@1.5.4/src/tabletop.min.js"></script>
+  <!-- Job Cards -->
+  <div class="container">
+    <div class="card-main" id="cardContainer">
+      <div class="card">
+        <img src="https://logowik.com/content/uploads/images/ey8162.logowik.com.webp" alt="EY Logo">
+        <h2>SAP Consultant at EY</h2>
+        <button onclick="window.location.href='mailto:mridula.bokde.ext@adani.com'">Apply Now</button>
+      </div>     
+
+      <div class="card">
+        <img src="https://download.logo.wine/logo/Hero_MotoCorp/Hero_MotoCorp-Logo.wine.png" alt="Hero MotoCorp">
+        <h2>Job Alerts</h2>
+        <button onclick="window.open('https://jobstechjobs.com/amazing-job-opportunities-at-heromotocorp-2025/', '_blank')">Apply Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Shuffle Script -->
   <script>
-    function showJobs(data) {
-      const grid = document.getElementById('jobGrid');
-      grid.innerHTML = '';
-
-      data.forEach(job => {
-        const company = job['Company Name'];
-        const position = job['Position'];
-        const applyLink = job['Apply Link'];
-        const logo = job['Logo URL'] || 'https://via.placeholder.com/300x180.png?text=Logo+Missing';
-
-        const card = document.createElement('div');
-        card.className = 'job-card';
-
-        card.innerHTML = `
-          <img src=\"${logo}\" alt=\"${company}\" />
-          <div class=\"info\">
-            <h3>Company Name - ${company}</h3>
-            <p>Position - ${position}</p>
-            <a class=\"apply-btn\" href=\"#\" onclick=\"handleApply('${applyLink}'); return false;\">Apply Now</a>
-          </div>
-        `;
-
-        grid.appendChild(card);
-      });
+    function getRandomSeed() {
+      const array = new Uint32Array(1);
+      window.crypto.getRandomValues(array);
+      return array[0];
     }
 
-    function handleApply(link) {
-      if (link.includes('@')) {
-        window.location.href = `https://mail.google.com/mail/?view=cm&to=${link}`;
-      } else {
-        window.open(link, '_blank');
-      }
+    function shuffleCards() {
+      const container = document.getElementById('cardContainer');
+      const cards = Array.from(container.children);
+      let seed = getRandomSeed();
+
+      const shuffled = cards.sort(() => {
+        seed = (seed * 16807) % 2147483647;
+        return (seed % 2 === 0) ? 1 : -1;
+      });
+
+      container.innerHTML = "";
+      shuffled.forEach(card => container.appendChild(card));
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
-      Tabletop.init({
-        key: 'https://docs.google.com/spreadsheets/d/1V5fgaCYxYSMBb2YN7I8VD7PIc6M2o0I3c7vN9XDSSJc/edit?usp=sharing',
-        simpleSheet: true,
-        callback: showJobs
-      });
-    });
+    window.onload = function() {
+      shuffleCards();
+      setInterval(shuffleCards, 1800000);
+    };
   </script>
+
 </body>
 </html>
